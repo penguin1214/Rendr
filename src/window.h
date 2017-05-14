@@ -1,6 +1,9 @@
 //
 // Created by Jinglei Yang on 4/25/17.
 //
+/**
+ * Create window and handle window evnets.
+ */
 
 #ifndef RENDR_WINDOW_H
 #define RENDR_WINDOW_H

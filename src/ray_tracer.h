@@ -28,8 +28,23 @@ namespace Rendr {
         void draw_pixels();
         void draw_zoom();
 
+        // rasterize a point
+        void rasterize_point( float x, float y, Color color );
+
+        // rasterize a line
+        void rasterize_line( float x0, float y0,
+                             float x1, float y1,
+                             Color color);
+
+        // rasterize a triangle
+        void rasterize_triangle( float x0, float y0,
+                                 float x1, float y1,
+                                 float x2, float y2,
+                                 Color color, Triangle *tri = NULL );
+
     private:
         SVG* svg;
+        int sample_rate;
         Matrix3x3 svg_to_ndc;
         std::vector<unsigned char> framebuffer;
         size_t framebuffer_width_, framebuffer_height_;
